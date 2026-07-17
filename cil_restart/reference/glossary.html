@@ -1,0 +1,13 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>CIL 术语表</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<h1>CIL 术语速查</h1>
+<table><thead><tr><th>术语</th><th>含义</th><th>常见误区</th></tr></thead><tbody>
+<tr><td>CIL</td><td>测试时未知 task id 的单头类增量学习</td><td>与多头 Task-IL 混排</td></tr>
+<tr><td>Replay</td><td>重放旧样本以平衡训练分布</td><td>只报 memory 总数，不报每类数量</td></tr>
+<tr><td>KD</td><td>用教师分布约束学生</td><td>认为旧类内部 KD 能校准 old/new 尺度</td></tr>
+<tr><td>AIA</td><td>各阶段 AA 的算术平均</td><td>误当 final AA</td></tr>
+<tr><td>Forgetting</td><td>历史最好到后续表现的下降</td><td>把最终阶段新类也计入</td></tr>
+<tr><td>MTD</td><td>同阶段多样化教师蒸馏</td><td>把历史 checkpoint 数量当教师多样性</td></tr>
+<tr><td>Separated softmax</td><td>按旧/新类别组分离分类归一化</td><td>单新类组 softmax 退化仍照搬</td></tr>
+</tbody></table>
+</main></body></html>
+

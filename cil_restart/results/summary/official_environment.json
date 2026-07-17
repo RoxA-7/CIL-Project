@@ -1,0 +1,42 @@
+{
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cuda_available": true,
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "modules": {
+    "torch": {
+      "ok": true,
+      "version": "2.5.1+cu121"
+    },
+    "torchvision": {
+      "ok": true,
+      "version": "0.20.1+cu121"
+    },
+    "continuum": {
+      "ok": false,
+      "error": "ModuleNotFoundError(\"No module named 'continuum'\")"
+    },
+    "yaml": {
+      "ok": true,
+      "version": "6.0.2"
+    },
+    "tensorboard": {
+      "ok": true,
+      "version": "2.16.2"
+    },
+    "scipy": {
+      "ok": true,
+      "version": "1.12.0"
+    },
+    "sklearn": {
+      "ok": true,
+      "version": "1.4.1.post1"
+    }
+  },
+  "official_present": false,
+  "official_commit": null,
+  "official_clean": null,
+  "official_expected_commit": "ce0789a40bda9e566a1e0432d3ac320937ca48f0",
+  "official_error": "missing official checkout at D:\\Pro_Experiment\\github_sync\\CIL-Project\\cil_restart\\third_party\\CLearning",
+  "ready": false
+}

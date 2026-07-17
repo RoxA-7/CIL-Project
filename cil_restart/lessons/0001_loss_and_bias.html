@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>第1课：CE、KD 与类别替换</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<h1>第 1 课：为什么新类会“替换”旧类</h1>
+<p class="lead">目标：不靠直觉，直接从梯度和 softmax 不变性解释 bus→train→wolf。</p>
+<h2>1. 新类交叉熵在做什么</h2>
+<p>对新类样本，交叉熵为 <code>L=-log softmax(z)_y</code>，对 logit 的梯度是：</p>
+<div class="formula">∂L/∂z_k = p_k - 1[k=y]</div>
+<p>目标新类的梯度为负，梯度下降会抬高它；所有非目标旧类梯度为正，梯度下降会压低它们。若训练集只有新类，这个方向会在每个 batch 重复。</p>
+<h2>2. 为什么旧类 KD 看不见共同下移</h2>
+<div class="formula">q_k = exp(z_k/T) / Σ_j exp(z_j/T)<br>softmax((z+c·1)/T)=softmax(z/T)</div>
+<p>如果 KD 只对旧类做 softmax，给所有旧类 logits 同时减去 10，旧类内部概率完全不变。因此 KD 能维持旧类之间的相对次序，却不能维护旧类与新类的绝对尺度。</p>
+<div class="warning"><strong>关键结论：</strong>旧类内部知识保住了，不等于旧类还能在单头分类器中赢过新类。</div>
+<h2>3. 代码问题如何叠加</h2>
+<ol><li>10→11 整个输出层重置，先直接删除旧决策边界。</li><li>11→12 虽复制旧行，但预热更新整个分类层。</li><li>新类独占训练数据，CE 重复拉开 old/new 尺度。</li><li>KD 对旧类共同平移盲区，无法抵消。</li></ol>
+<h2>4. 你应观察什么</h2>
+<p>不要只看准确率。同步画 per-class accuracy、old/new logit gap、输出行权重范数和 CE/KD 梯度。若 bus 归零与 gap 过界同一 epoch 发生，因果链更可信。</p>
+<div class="check"><strong>自检：</strong>能否解释为什么“KD loss 很小”仍可能所有旧类准确率归零？</div>
+</main></body></html>
+

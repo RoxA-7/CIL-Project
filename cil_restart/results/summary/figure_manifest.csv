@@ -1,0 +1,5 @@
+﻿figure,status,question,conclusion
+图1,partial,bus 的归零是否与 train 的获得同步？,由真实 D0-D4 日志判读；wolf 留待 12→13 扩展。
+图2,complete,准确率突变是否伴随 old/new 决策尺度漂移？,比较 gap 越过零点与类别准确率突变的 epoch。
+图3,complete,CE 与 KD 分别作用到哪些输出行？,结合 JSON 中 signed_mean 判断方向，柱高判断强度。
+图7,complete,旧类错误是否集中流向最新类别？,看旧类行与最新类别列的高值区域。

@@ -1,0 +1,23 @@
+dataset: CIFAR100
+scenario: class
+order: 0
+init: 50
+tasks: 6
+scheme: LwF
+model: model.resnet_cifar.resnet32
+optim: SGD
+lr: 0.1
+decay: 5.0e-4
+momentum: 0.9
+steps: [80, 120]
+gamma: 0.1
+bs: 128
+epochs: 160
+tau: 2
+lambd: 1.0
+mode: GPU
+gpuid: 0
+workers: 4
+seed: 1993
+name: official/lwf/cifar100_b50_5s
+

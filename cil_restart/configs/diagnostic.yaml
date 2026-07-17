@@ -1,0 +1,17 @@
+seed: 1993
+epochs: 6
+batch_size: 32
+learning_rate: 0.001
+temperature: 2.0
+lambda_ce: 0.8
+memory_per_class: 20
+feature_cache: cache/legacy_vgg11_features.pt
+legacy_root: ../增量学习代码/VGG16_CIL
+checkpoint: ../增量学习代码/VGG16_CIL/vgg16_best11.pth
+data_root: ../增量学习代码/data_set/cifar100
+variants:
+  D0: {head_init: copy, update_old_rows: true, replay: false, loss: ce_kd}
+  D1: {head_init: reset, update_old_rows: true, replay: false, loss: ce_kd}
+  D2: {head_init: copy, update_old_rows: false, replay: false, loss: ce_kd}
+  D3: {head_init: copy, update_old_rows: true, replay: true, loss: ce_kd}
+  D4: {head_init: copy, update_old_rows: true, replay: true, loss: group_separated}

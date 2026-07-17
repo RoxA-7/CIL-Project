@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>第3课：真正的 MTD</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<h1>第 3 课：什么才是真正的 MTD</h1>
+<p class="lead">目标：区分“有两个 checkpoint”与“同一阶段的多样化教师”。</p>
+<h2>1. 三个条件</h2>
+<ol><li><strong>知识覆盖一致：</strong>教师应覆盖当前蒸馏所需的旧类；10 类教师不能提供 bus 知识。</li><li><strong>多样性可控：</strong>教师由权重置换、特征扰动等机制在同一阶段形成，而不是简单拿更早 checkpoint 嵌套。</li><li><strong>学生可获梯度：</strong>每个损失项必须依赖学生输出；只比较两个冻结教师的损失对学生梯度为零。</li></ol>
+<h2>2. 为什么多样性不是越大越好</h2>
+<p>教师必须既不同又正确。完全相同没有互补信息；偏离原模型过大则提供噪声。因此要同时报告教师质量、多样性、额外参数、训练时间和最终增益。</p>
+<h2>3. 2×2 研究设计</h2>
+<table><thead><tr><th></th><th>单教师</th><th>多教师</th></tr></thead><tbody><tr><td>普通分类</td><td>PODNet</td><td>MTD-PODNet</td></tr><tr><td>偏差校正</td><td>SS-IL</td><td>MTD-SSIL</td></tr></tbody></table>
+<p>交互增益 = (MTD-SSIL−SS-IL)−(MTD-PODNet−PODNet)。若接近零，两种机制可能近似独立；若为负，多教师收益可能被偏差校正吸收。</p>
+<div class="warning"><strong>学术边界：</strong>官方已存在 MTD-SSIL，只能作为基线，不能包装成创新。</div>
+<div class="check"><strong>自检：</strong>如何用 autograd 检查一个“教师一致性损失”是否真的训练了学生？</div>
+</main></body></html>
+

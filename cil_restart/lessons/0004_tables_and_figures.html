@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>第4课：三线表与图表</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<h1>第 4 课：如何读三线表和诊断图</h1>
+<p class="lead">目标：从“数字更大”升级到“证据是否稳定、是否解释机制、是否值得成本”。</p>
+<h2>1. 三线表</h2>
+<p>三线表只保留顶线、表头分隔线和底线，不用竖线。方法左对齐，数字右对齐；最优加粗、次优下划线；协议不同不得共同排名。</p>
+<h2>2. 均值±标准差</h2>
+<p><code>65.20 ± 0.80</code> 表示三种子中心与波动。若 MTD 比基线只高 0.4，而波动为 0.8，不应写“显著提升”；至少应写“提升未超过随机波动”。</p>
+<h2>3. 每张图回答一个问题</h2>
+<table><thead><tr><th>图</th><th>核心问题</th></tr></thead><tbody><tr><td>增量曲线</td><td>早期领先还是后期抗忘？</td></tr><tr><td>遗忘曲线</td><td>旧类保持是否改善？</td></tr><tr><td>稳定性—可塑性</td><td>是否同时兼顾 old/new？</td></tr><tr><td>混淆矩阵</td><td>旧类错误是否流向最新类？</td></tr><tr><td>性能—成本</td><td>增益是否值得额外教师？</td></tr></tbody></table>
+<h2>4. 一致性检查</h2>
+<ul><li>AIA 必须等于逐阶段 AA 算术平均。</li><li>曲线终点必须等于主表 final AA。</li><li>缺 seed 时禁止输出均值±标准差。</li><li>表图只能从同一 tidy CSV 生成。</li></ul>
+<div class="check"><strong>自检：</strong>为什么把点大小编码成训练成本有时会妨碍阅读？何时应该删掉？</div>
+</main></body></html>
+

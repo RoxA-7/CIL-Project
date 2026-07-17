@@ -1,0 +1,169 @@
+{
+  "all_numeric_checks_passed": true,
+  "checks": [
+    {
+      "run_id": "diag_D0_seed1993_20260716T131922",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D0_seed1993_20260716T131922",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D0_seed1993_20260716T131950",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D0_seed1993_20260716T131950",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D0_seed1993_20260716T132125",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D0_seed1993_20260716T132125",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D1_seed1993_20260716T131922",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D1_seed1993_20260716T131922",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D1_seed1993_20260716T131950",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D1_seed1993_20260716T131950",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D1_seed1993_20260716T132125",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D1_seed1993_20260716T132125",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D2_seed1993_20260716T131922",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D2_seed1993_20260716T131922",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D2_seed1993_20260716T131951",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D2_seed1993_20260716T131951",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D2_seed1993_20260716T132125",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D2_seed1993_20260716T132125",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D3_seed1993_20260716T131922",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D3_seed1993_20260716T131922",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D3_seed1993_20260716T131951",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D3_seed1993_20260716T131951",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D3_seed1993_20260716T132126",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D3_seed1993_20260716T132126",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D4_seed1993_20260716T131923",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D4_seed1993_20260716T131923",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D4_seed1993_20260716T131951",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D4_seed1993_20260716T131951",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D4_seed1993_20260716T132126",
+      "check": "AIA arithmetic mean",
+      "passed": true
+    },
+    {
+      "run_id": "diag_D4_seed1993_20260716T132126",
+      "check": "final AA equals curve endpoint",
+      "passed": true
+    },
+    {
+      "run_id": "GLOBAL",
+      "check": "core methods have seeds 1993/1994/1995",
+      "passed": false,
+      "details": {
+        "FineTune": [],
+        "LwF": [],
+        "Replay": [],
+        "PODNet": [],
+        "MTD-PODNet": [],
+        "SS-IL": [],
+        "MTD-SSIL": []
+      }
+    }
+  ]
+}

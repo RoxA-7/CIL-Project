@@ -1,0 +1,15 @@
+dataset: CIFAR100
+scenario: class
+class_order: 0
+init_classes: 50
+tasks: 6
+increments: [50, 10, 10, 10, 10, 10]
+memory_per_class: 20
+batch_size: 128
+memory_batch_size: 32
+backbone: resnet32
+seeds: [1993, 1994, 1995]
+sanity_seeds: [1993]
+checkpoint_selection: fixed_last_epoch
+test_usage: final_evaluation_only
+

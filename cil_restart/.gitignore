@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+data/
+cache/
+outputs/qa/
+results/raw/*.tmp
+third_party/CLearning/data/
+third_party/CLearning/log/
+third_party/CLearning/output/
+

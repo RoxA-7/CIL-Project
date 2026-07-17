@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>第2课：CIL 协议与指标</title><link rel="stylesheet" href="../assets/course.css"></head><body><main>
+<h1>第 2 课：标准 CIL 协议与指标</h1>
+<p class="lead">目标：看见一个数字时，先知道它来自哪个阶段、哪些类别和什么协议。</p>
+<h2>1. B50-5S</h2>
+<table><thead><tr><th>Task</th><th>新增类</th><th>累计类</th></tr></thead><tbody><tr><td>0</td><td>50</td><td>50</td></tr><tr><td>1</td><td>10</td><td>60</td></tr><tr><td>2</td><td>10</td><td>70</td></tr><tr><td>3</td><td>10</td><td>80</td></tr><tr><td>4</td><td>10</td><td>90</td></tr><tr><td>5</td><td>10</td><td>100</td></tr></tbody></table>
+<p>单头 CIL 在测试时不给 task id，100 个类别共享同一决策空间。多头或已知 task id 的 LwF 结果不能与它直接混排。</p>
+<h2>2. AA、AIA、forgetting</h2>
+<div class="formula">AA_t = 当前阶段所有已学类别的准确率<br>AIA = (AA_0+…+AA_5)/6<br>F = 旧类别历史最好准确率与最终准确率之差的平均</div>
+<ul><li>final AA 回答“最后剩多少”。</li><li>AIA 回答“整个学习过程平均多好”。</li><li>forgetting 回答“过去学会的内容掉了多少”。</li><li>old/new accuracy 把稳定性与可塑性拆开。</li></ul>
+<h2>3. 复现实验的边界</h2>
+<p>固定 epoch；测试集只在既定节点评价；三种子报告均值±样本标准差。PODNet/MTD-PODNet 若与论文 AIA 差超过 2 个百分点，停止扩展并排查数据、类顺序、归一化和配置。</p>
+<div class="check"><strong>自检：</strong>一个方法 final AA 更高但 AIA 更低，可能意味着什么？</div>
+</main></body></html>
+
