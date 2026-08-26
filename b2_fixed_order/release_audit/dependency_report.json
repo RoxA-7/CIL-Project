@@ -1,0 +1,70 @@
+{
+  "python_files": 19,
+  "project_imports": [
+    {
+      "file": "src/lwf_revision/recursive_ridge_equivalence.py",
+      "module": "lwf_revision.frozen_head_reconstruction"
+    },
+    {
+      "file": "src/lwf_revision/recursive_ridge_equivalence.py",
+      "module": "lwf_revision.recursive_centered_ridge"
+    },
+    {
+      "file": "tools/aggregate_b2_class12_multiseed.py",
+      "module": "lwf_revision.b2_class12_multiseed"
+    },
+    {
+      "file": "tools/audit_b2_class12_seed.py",
+      "module": "tools.audit_recursive_ridge_statistics"
+    },
+    {
+      "file": "tools/audit_recursive_ridge_statistics.py",
+      "module": "lwf_revision.balanced_global_ridge_oof"
+    },
+    {
+      "file": "tools/build_recursive_ridge_statistics.py",
+      "module": "lwf_revision.balanced_global_ridge_oof"
+    },
+    {
+      "file": "tools/build_recursive_ridge_statistics.py",
+      "module": "lwf_revision.recursive_centered_ridge"
+    },
+    {
+      "file": "tools/build_recursive_ridge_statistics.py",
+      "module": "lwf_revision.recursive_ridge_equivalence"
+    },
+    {
+      "file": "tools/run_b2_class12_seed.py",
+      "module": "lwf_revision.b2_class12_multiseed"
+    },
+    {
+      "file": "tools/run_b2_class12_seed.py",
+      "module": "lwf_revision.recursive_centered_ridge"
+    },
+    {
+      "file": "tools/run_b2_class12_seed.py",
+      "module": "lwf_revision.recursive_ridge_class12_sequence"
+    },
+    {
+      "file": "tests/test_b2_class12_multiseed.py",
+      "module": "lwf_revision.b2_class12_multiseed"
+    },
+    {
+      "file": "tests/test_recursive_centered_ridge.py",
+      "module": "lwf_revision.frozen_head_reconstruction"
+    },
+    {
+      "file": "tests/test_recursive_centered_ridge.py",
+      "module": "lwf_revision.recursive_centered_ridge"
+    },
+    {
+      "file": "tests/test_recursive_ridge_class12_sequence.py",
+      "module": "lwf_revision.recursive_ridge_class12_sequence"
+    },
+    {
+      "file": "tests/test_recursive_ridge_equivalence.py",
+      "module": "lwf_revision.recursive_ridge_equivalence"
+    }
+  ],
+  "missing": []
+}

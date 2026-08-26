@@ -2,7 +2,20 @@
 
 类增量学习（Class-Incremental Learning, CIL）交接项目的整理版仓库。
 
-本仓库用于保存当前已经完成的项目重启成果：旧实验故障复盘、统一日志与表图生成流程、组会交付材料、零基础教学讲义，以及后续标准 CIFAR-100 CIL 复现实验的工程骨架。
+本仓库包含两条边界不同、不能混写结果的研究路线：
+
+1. `cil_restart/`：旧实验故障复盘、表图流程、教学材料，以及标准 CIFAR-100 CIL 复现实验的工程骨架；其中正式 B50-5S 多方法主结果尚未完成。
+2. `b2_fixed_order/`：固定类别顺序下的解析递归 Ridge B2 研究；已完成类别 12 的 train-only 五折 OOF 三随机种子确认，但尚未完成冻结后的独立 validation 和 official test。
+
+两条路线使用不同的数据边界、评价协议和研究目标，仓库中的数字必须在各自目录内解释，不能直接用于相互排名。
+
+## 固定顺序 B2 研究
+
+`b2_fixed_order/`针对“学习类别 11 后类别 10 接近失效，并在继续学习类别 12 时保持已见类别”的问题。方法冻结特征提取网络，用可加的充分统计量递归更新 centered Ridge 分类头。
+
+三随机种子 train-only OOF 均值为：类别 10 为 62.60%，类别 11 为 68.40%，类别 12 为 79.27%，类别 0—9 宏平均为 96.48%，总体为 90.39%。类别 11 相对原生头下降，因此这是伴随真实权衡的平衡改善，不是无代价解决。
+
+完整实验因果过程、复现边界和最小代码见 [`b2_fixed_order/README.md`](b2_fixed_order/README.md)。
 
 ## 1. 项目在研究什么
 
@@ -75,6 +88,13 @@ train 又被 wolf 替换
 ```text
 .
 ├── README.md
+├── b2_fixed_order/
+│   ├── README.md
+│   ├── src/
+│   ├── tools/
+│   ├── tests/
+│   ├── configs/
+│   └── docs/
 ├── docs/
 │   ├── BACKUP_MANIFEST.md
 │   ├── PROJECT_RECORD.md
@@ -84,11 +104,7 @@ train 又被 wolf 替换
 │   │   └── CIL类增量学习完整课程讲义.pdf
 │   ├── tables/
 │   │   └── CIL三线表与实验结果.xlsx
-│   ├── figures/
-│   │   ├── 图1_类别替换轨迹.png
-│   │   ├── 图2_logit_gap轨迹.png
-│   │   ├── 图3_CE_KD梯度方向.png
-│   │   └── 图7_最终混淆矩阵.png
+
 │   └── 组会成果包.md
 └── cil_restart/
     ├── README.md
@@ -114,6 +130,8 @@ train 又被 wolf 替换
 
 | 文件 | 用途 |
 |---|---|
+| `b2_fixed_order/README.md` | 固定顺序解析递归Ridge B2的代码、方法、实验过程与证据边界。 |
+| `docs/LOCAL_PATH_RISK_AUDIT.md` | 现有历史结果中本机路径的风险清单与未来公开处理建议。 |
 | `deliverables/pdf/CIL类增量学习完整课程讲义.pdf` | 84 页零基础教学讲义，解释神经网络、CE、KD、CIL、D0-D4、图表和答辩。 |
 | `deliverables/组会成果包.md` | 当前可以用于组会的简版结论。 |
 | `cil_restart/results/tables/表1_交接问题复盘.md` | D0-D4 诊断三线表。 |
@@ -219,4 +237,4 @@ results/raw/*.json
 
 ## 10. 当前状态一句话
 
-当前项目已经完成旧实验故障机制诊断、表图自动化框架、组会材料和教学材料；标准 CIFAR-100 B50-5S 多方法三种子正式结果仍待环境打通后运行。
+当前仓库已完成旧实验故障机制诊断和固定顺序 B2 的 train-only 三随机种子确认；标准 CIFAR-100 B50-5S 多方法正式结果、B2 独立 validation 与 official test 均仍待完成。

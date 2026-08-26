@@ -1,0 +1,17 @@
+{
+  "status": "ready_for_user_review_not_uploaded",
+  "python_files": 19,
+  "core_tests_passed": 46,
+  "core_tests_failed": 0,
+  "dependency_missing": 0,
+  "local_path_hits": 0,
+  "secret_hits": 0,
+  "forbidden_method_code_hits": 0,
+  "forbidden_artifacts": 0,
+  "large_files": 0,
+  "symlinks": 0,
+  "cache_files": 0,
+  "manifest_mismatches": 0,
+  "source_snapshot_before_after_identical": true,
+  "uploaded": false
+}

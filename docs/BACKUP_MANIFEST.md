@@ -7,7 +7,7 @@
 Before preparing this GitHub package, a full local backup of the current `cil_restart` directory was created:
 
 ```text
-D:\Pro_Experiment\backups\cil_restart_before_github_push_20260718_001936.zip
+<LOCAL_BACKUP>/cil_restart_before_github_push_20260718_001936.zip
 ```
 
 This backup contains the full local working copy, including files that are intentionally not included in the GitHub package, such as temporary render outputs and caches.
@@ -38,4 +38,3 @@ Excluded:
 ## Why This Split
 
 The local backup preserves everything for recovery. The GitHub package preserves the project evidence and deliverables without committing avoidable large files, third-party sources, or copyrighted papers.
-

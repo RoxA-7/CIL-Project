@@ -14,19 +14,19 @@
 
 ```powershell
 # 单元测试与数学验收
-D:\Python\python.exe -m pytest
+python -m pytest
 
 # 类别替换诊断（先抽取一次 VGG 特征，再运行 D0-D4）
-D:\Python\python.exe scripts\run_legacy_diagnostics.py --variants D0 D1 D2 D3 D4 --epochs 6
+python scripts\run_legacy_diagnostics.py --variants D0 D1 D2 D3 D4 --epochs 6
 
 # 汇总真实日志并生成 CSV、三线表、图片和摘要
-D:\Python\python.exe scripts\build_results.py
+python scripts\build_results.py
 
 # 检查官方 CLearning 环境和配置，不启动长时训练
-D:\Python\python.exe scripts\check_official.py
+python scripts\check_official.py
 
 # 运行一项正式实验；默认固定 epoch，不以测试集选 best
-D:\Python\python.exe scripts\run_official.py --method podnet --seed 1993
+python scripts\run_official.py --method podnet --seed 1993
 ```
 
 ## 目录
@@ -40,4 +40,3 @@ D:\Python\python.exe scripts\run_official.py --method podnet --seed 1993
 - `results/summary/`：自动结论、完整性与一致性检查。
 - `lessons/`、`reference/`：教学材料。
 - `third_party/CLearning/`：作者官方源码，固定提交见 `THIRD_PARTY_LOCK.md`。
-

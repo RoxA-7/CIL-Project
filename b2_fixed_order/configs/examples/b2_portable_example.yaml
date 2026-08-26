@@ -1,0 +1,9 @@
+feature_root: "artifacts/features"
+statistics_root: "artifacts/statistics"
+output_root: "artifacts/b2_runs"
+seeds: [2026, 2027, 2028]
+ridge_l2: 1.0
+dtype: "float64"
+device: "cpu"
+evaluate_validation: false
+evaluate_official_test: false
